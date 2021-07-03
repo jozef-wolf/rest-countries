@@ -3,7 +3,7 @@ const getCountries = async () => {
   const data = await response.json();
 
   if (response.status !== 200) {
-    throw new Error("cannot fetch the data" );
+    throw new Error("cannot fetch the data");
   }
 
   return data;
@@ -12,3 +12,14 @@ const getCountries = async () => {
 getCountries()
   .then((data) => console.log("resolved", data))
   .catch((err) => console.log("rejected:", err.message));
+
+const table = document.querySelector("#table");
+
+const mappedContentForHeader = {
+  name: "Name",
+  currency: "Currency",
+  language: "Language",
+  population: "Population",
+  area: "Area",
+  flag: "Flag",
+};
