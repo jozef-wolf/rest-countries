@@ -4,4 +4,7 @@ const getCountries = async () => {
 
   return data;
 };
-getCountries().then((data) => console.log("resolved", data));
+
+getCountries()
+  .then((data) => console.log("resolved", data))
+  .catch((err) => console.log("resolved:", err.message));
