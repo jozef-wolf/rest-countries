@@ -18,11 +18,11 @@ header {
 
 .table__row {
   display: flex;
-  margin-bottom: 10px;
+  padding: 1%;
 }
 
 .table__row.table__row--header {
-  padding-bottom: 10px;
+  padding: 10px;
   border-bottom: 2px solid black;
 }
 
@@ -32,13 +32,19 @@ header {
 }
 
 .table__row > .table__cell {
-  flex: 0 0 16%;
-  max-width: 16%;
+  flex: 0 0 20%;
+  max-width: 20%;
 }
 
 .flag {
   width: 30px;
   height: auto;
+}
+
+.table__row:hover:not(.table__row.table__row--header) {
+  box-shadow: 3px 10px 3px 3px rgba(194, 194, 194, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
