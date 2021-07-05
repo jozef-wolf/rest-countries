@@ -11,7 +11,8 @@ header {
   margin: 30px 30px 0;
 }
 
-.container__table {
+.container__table,
+.container__header {
   margin: 30px;
 }
 
@@ -26,8 +27,8 @@ header {
 }
 
 .table__row > .table__cell:first-of-type {
-  flex: 0 0 4%;
-  max-width: 4%;
+  flex: 0 0 10%;
+  max-width: 10%;
 }
 
 .table__row > .table__cell {
@@ -37,7 +38,7 @@ header {
 
 .flag {
   width: 30px;
-  height: 30px;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
