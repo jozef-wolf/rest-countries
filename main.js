@@ -11,12 +11,14 @@ https://restcountries.eu/rest/v2/all
   const countries = await response.json();
 
   countries.forEach((country) => {
-    templateCountries += `<div>${country.name}</div>
+    templateCountries += `<div>
+    <div></div>${country.name}</div>
     <div>${country.currencies[0].name}</div>
     <div>${country.languages}</div>
     <div>${country.population}</div>
     <div>${country.area}</div>
-    <div><img src='${country.flag}'></img></div>`;
+    <div><img src='${country.flag}' width='100px'></img></div>
+    </div>`;
   });
   countriesContainer.innerHTML = templateCountries;
 

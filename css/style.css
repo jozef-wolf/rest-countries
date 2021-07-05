@@ -15,4 +15,29 @@ header {
   margin: 30px;
 }
 
+.table__row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.table__row.table__row--header {
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+.table__row > .table__cell:first-of-type {
+  flex: 0 0 4%;
+  max-width: 4%;
+}
+
+.table__row > .table__cell {
+  flex: 0 0 16%;
+  max-width: 16%;
+}
+
+.flag {
+  width: 30px;
+  height: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
