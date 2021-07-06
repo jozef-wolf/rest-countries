@@ -57,12 +57,13 @@ function displayCountriesMobile(countries) {
     countryEl.classList.add("mobile");
     console.log(countryEl);
     countryEl.innerHTML = `
-        <div>Name: ${country.name}</div>
-        <div>Currency: ${country.currencies[0].name}</div>
-        <div>Language: ${country.languages[0].name}</div>
-        <div>Population: ${country.population}</div>
-        <div>Area: ${country.area}</div>
-        <div><img src='${country.flag}' width='100px'></img></td>
+        <div><img src='${country.flag}' width='100px'></img></div>
+        <h2>${country.name}</h2>
+        <p><strong>Currency:</strong> ${country.currencies[0].name}</p>
+        <p><strong>Language:</strong> ${country.languages[0].name}</p>
+        <p><strong>Population:</strong> ${country.population}</p>
+        <p><strong>Area:</strong> ${country.area}</p>
+        
   `;
     container.appendChild(countryEl);
   });
