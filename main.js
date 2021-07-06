@@ -55,10 +55,11 @@ function searchCountries() {
   let tableRecord = document.getElementById("tableRecord");
 
   console.log(search);
-  let tr = tableRecord.querySelectorAll("tr");
+  let tr = tableRecord.getElementsByTagName("tr");
 
   for (let i = 0; i < tr.length; i++) {
-    let td = tr[i].querySelectorAll("td")[0];
+    let td = tr[i].getElementsByTagName("td")[0];
+    console.log(td);
 
     if (td) {
       let textvalue = td.textContent || td.innerText;
