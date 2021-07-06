@@ -1,5 +1,5 @@
-const countriesContainer = document.querySelector(".container__table");
-const header = document.querySelector(".container__header");
+const countriesContainer = document.querySelector("tbody");
+const header = document.querySelector("thead");
 
 const ContentForHeader = {
   name: "Name",
@@ -21,30 +21,37 @@ https://restcountries.eu/rest/v2/all
   const countries = await response.json();
 
   templateHeader += `
-    <div class="table__row table__row--header">
-      <div class="table__cell">${ContentForHeader.name}</div>
-      <div class="table__cell">${ContentForHeader.currency}</div>
-      <div class="table__cell">${ContentForHeader.language}</div>
-      <div class="table__cell">${ContentForHeader.population}</div>
-      <div class="table__cell">${ContentForHeader.area}</div>
-      <div class="table__cell">${ContentForHeader.flag}</div>
-    </div>`;
+    <thead>
+    <tr>
+      <th>${ContentForHeader.name}</th>
+      <th>${ContentForHeader.currency}</th>
+      <th>${ContentForHeader.language}</th>
+      <th>${ContentForHeader.population}</th>
+      <th>${ContentForHeader.area}</th>
+      <th>${ContentForHeader.flag}</th>
+    </tr>
+    </thead>`;
 
   header.innerHTML = templateHeader;
 
   countries.map((country) => {
     templateCountries += `
-    <div class="table__row">
-      <div class="table__cell">${country.name}</div>
-      <div class="table__cell">${country.currencies[0].name}</div>
-      <div class="table__cell">${country.languages}</div>
-      <div class="table__cell">${country.population}</div>
-      <div class="table__cell">${country.area}</div>
-      <img src='${country.flag}' class="table__cell" width='100px'></img>
-    </div>`;
+    <tbody>
+    <tr>
+      <td>${country.name}</td>
+      <td>${country.currencies[0].name}</td>
+      <td>${country.languages[0].name}</td>
+      <td>${country.population}</td>
+      <td>${country.area}</td>
+      <td><img src='${country.flag}'  width='100px'></img></td>
+      </tr>
+    </tbody>`;
   });
 
   countriesContainer.innerHTML = templateCountries;
+
+
+
 
   if (response.status !== 200) {
     throw new Error("cannot fetch the data");
@@ -56,5 +63,3 @@ https://restcountries.eu/rest/v2/all
 getCountries()
   .then((data) => console.log("resolved", data))
   .catch((err) => console.log("rejected:", err.message));
-
-window.addEventListener("DOMContentLoaded", () => getCountries());
