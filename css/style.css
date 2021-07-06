@@ -22,24 +22,50 @@ header {
 }
 
 .container {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  width: 100vw;
+}
+.container .mobile {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .container .mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px;
+    box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.6);
+  }
+}
+.container .desktop {
+  display: "";
+}
+@media only screen and (max-width: 768px) {
+  .container .desktop {
+    display: none;
+  }
 }
 .container table {
-  width: 100vw;
+  width: 90%;
 }
 @media only screen and (max-width: 768px) {
   .container table {
-    width: 100vw;
     font-size: 12px;
   }
 }
 .container table thead {
   background-color: #5252a0;
   color: white;
+}
+@media only screen and (max-width: 768px) {
+  .container table thead {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .container table tbody {
   background-color: #f2f3fa;

@@ -21,20 +21,40 @@ header {
   outline: none;
 }
 .container {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  width: 100vw;
-  table {
-    width: 100vw;
+  .mobile {
+    display: none;
     @media only screen and (max-width: 768px) {
-      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 70%;
+      margin: 20px;
+      box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.6);
+    }
+  }
+  .desktop {
+    display: "";
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  table {
+    width: 90%;
+    @media only screen and (max-width: 768px) {
       font-size: 12px;
     }
     thead {
       background-color: rgb(82, 82, 160);
       color: white;
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+      }
     }
     tbody {
       background-color: rgb(242, 243, 250);

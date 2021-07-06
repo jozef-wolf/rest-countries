@@ -1,7 +1,7 @@
 const countriesContainer = document.querySelector("tbody");
 const header = document.querySelector("thead");
 const searchEl = document.getElementById("search");
-
+const container = document.querySelector(".container");
 let url = "https://restcountries.eu/rest/v2/all";
 
 const ContentForHeader = {
@@ -31,13 +31,14 @@ async function getCountries() {
   const countries = await res.json();
 
   displayCountries(countries);
+  displayCountriesMobile(countries);
   console.log(countries);
 }
 
 function displayCountries(countries) {
   countries.forEach((country) => {
     const countryEl = document.createElement("tr");
-    countryEl.classList.add("searching");
+    countryEl.classList.add("desktop");
     countryEl.innerHTML = `
         <td>${country.name}</td>
         <td>${country.currencies[0].name}</td>
@@ -47,6 +48,23 @@ function displayCountries(countries) {
         <td><img src='${country.flag}'  width='100px'></img></td>
   `;
     countriesContainer.appendChild(countryEl);
+  });
+}
+
+function displayCountriesMobile(countries) {
+  countries.forEach((country) => {
+    const countryEl = document.createElement("div");
+    countryEl.classList.add("mobile");
+    console.log(countryEl);
+    countryEl.innerHTML = `
+        <div>Name: ${country.name}</div>
+        <div>Currency: ${country.currencies[0].name}</div>
+        <div>Language: ${country.languages[0].name}</div>
+        <div>Population: ${country.population}</div>
+        <div>Area: ${country.area}</div>
+        <div><img src='${country.flag}' width='100px'></img></td>
+  `;
+    container.appendChild(countryEl);
   });
 }
 
