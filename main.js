@@ -1,6 +1,7 @@
 const countriesContainer = document.querySelector("tbody");
 const header = document.querySelector("thead");
-const headerEl = document.createElement("tr");
+const searchEl = document.getElementById("search");
+
 let url = "https://restcountries.eu/rest/v2/all";
 
 const ContentForHeader = {
@@ -12,6 +13,7 @@ const ContentForHeader = {
   flag: "Flag",
 };
 
+const headerEl = document.createElement("tr");
 headerEl.innerHTML = `
       <th>${ContentForHeader.name}</th>
       <th>${ContentForHeader.currency}</th>
@@ -22,9 +24,7 @@ headerEl.innerHTML = `
     `;
 header.appendChild(headerEl);
 
-getCountries()
-  .then((countries) => console.log("resolved", countries))
-  .catch((err) => console.log("rejected:", err.message));
+getCountries();
 
 async function getCountries() {
   const res = await fetch(url);
@@ -50,6 +50,11 @@ function displayCountries(countries) {
     countriesContainer.appendChild(countryEl);
   });
 }
+
+searchEl.addEventListener("input", (e) => {
+  const val = e.target.value;
+  console.log(val);
+});
 
 // const getCountries = async () => {
 //   let urlCountries = `
