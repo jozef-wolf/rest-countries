@@ -39,7 +39,7 @@ function displayCountries(countries) {
     const countryEl = document.createElement("tr");
 
     countryEl.innerHTML = `
-        <td>${country.name}</td>
+        <td class="searching">${country.name}</td>
         <td>${country.currencies[0].name}</td>
         <td>${country.languages[0].name}</td>
         <td>${country.population}</td>
@@ -53,36 +53,14 @@ function displayCountries(countries) {
 
 searchEl.addEventListener("input", (e) => {
   const val = e.target.value;
-  console.log(val);
+  const countryName = document.querySelectorAll("td");
+
+  countryName.forEach((name) => {
+    console.log(name.innerText);
+    if (name.innerText.toLowerCase().includes(val.toLowerCase())) {
+      name.style.display = "block";
+    } else {
+      name.style.display = "none";
+    }
+  });
 });
-
-// const getCountries = async () => {
-//   let urlCountries = `
-// https://restcountries.eu/rest/v2/all
-// `;
-//   let templateCountries = "";
-//
-
-//   const response = await fetch(urlCountries);
-//   const countries = await response.json();
-
-//   countries.map((country) => {
-//     templateCountries += `
-//     <tbody>
-//     <tr>
-//
-//       </tr>
-//     </tbody>`;
-//   });
-
-//   countriesContainer.innerHTML = templateCountries;
-
-//   if (response.status !== 200) {
-//     throw new Error("cannot fetch the data");
-//   }
-
-//   return countries;
-// };
-
-// getCountries()
-//
