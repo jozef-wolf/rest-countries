@@ -25,14 +25,19 @@ header {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  width: 100vw;
   table {
-    width: 100%;
+    width: 100vw;
+    @media only screen and (max-width: 768px) {
+      width: 100vw;
+      font-size: 12px;
+    }
     thead {
       background-color: rgb(82, 82, 160);
       color: white;
     }
     tbody {
-      background-color: rgb(238, 238, 238);
+      background-color: rgb(242, 243, 250);
       td {
         text-align: center;
       }

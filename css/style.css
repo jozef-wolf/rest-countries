@@ -26,16 +26,23 @@ header {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  width: 100vw;
 }
 .container table {
-  width: 100%;
+  width: 100vw;
+}
+@media only screen and (max-width: 768px) {
+  .container table {
+    width: 100vw;
+    font-size: 12px;
+  }
 }
 .container table thead {
   background-color: #5252a0;
   color: white;
 }
 .container table tbody {
-  background-color: #eeeeee;
+  background-color: #f2f3fa;
 }
 .container table tbody td {
   text-align: center;
