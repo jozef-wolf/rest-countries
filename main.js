@@ -37,30 +37,36 @@ async function getCountries() {
 function displayCountries(countries) {
   countries.forEach((country) => {
     const countryEl = document.createElement("tr");
-
+    countryEl.classList.add("searching");
     countryEl.innerHTML = `
-        <td class="searching">${country.name}</td>
+        <td>${country.name}</td>
         <td>${country.currencies[0].name}</td>
         <td>${country.languages[0].name}</td>
         <td>${country.population}</td>
         <td>${country.area}</td>
         <td><img src='${country.flag}'  width='100px'></img></td>
   `;
-
     countriesContainer.appendChild(countryEl);
   });
 }
 
-searchEl.addEventListener("input", (e) => {
-  const val = e.target.value;
-  const countryName = document.querySelectorAll("td");
+function searchCountries() {
+  let search = document.getElementById("search").value.toUpperCase();
+  let tableRecord = document.getElementById("tableRecord");
 
-  countryName.forEach((name) => {
-    console.log(name.innerText);
-    if (name.innerText.toLowerCase().includes(val.toLowerCase())) {
-      name.style.display = "block";
-    } else {
-      name.style.display = "none";
+  console.log(search);
+  let tr = tableRecord.querySelectorAll("tr");
+
+  for (let i = 0; i < tr.length; i++) {
+    let td = tr[i].querySelectorAll("td")[0];
+
+    if (td) {
+      let textvalue = td.textContent || td.innerText;
+      if (textvalue.toUpperCase().indexOf(search) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
     }
-  });
-});
+  }
+}
