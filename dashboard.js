@@ -1,5 +1,3 @@
-console.log("DUPA");
-
 function averagePopulation(countries) {
   const sum = countries.reduce((acc, country) => acc + country.population, 0);
   const avg = sum / countries.length;
@@ -25,4 +23,3 @@ function averageBorders(countries) {
   console.log(avg);
   return avg;
 }
-
