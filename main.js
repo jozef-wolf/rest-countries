@@ -32,7 +32,10 @@ async function getCountries() {
   displayCountriesMobile(countries);
   minPopulation(countries);
   maxPopulation(countries);
-  console.log(countries);
+  averagePopulation(countries);
+  averageArea(countries);
+  numberOfCountries(countries);
+  averageBorders(countries);
 }
 
 getCountries();
@@ -112,4 +115,3 @@ function searchCountriesMobile() {
     }
   }
 }
-
