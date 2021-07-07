@@ -99,7 +99,7 @@ function searchCountriesMobile() {
   let divEl = container.getElementsByTagName("div");
 
   for (let i = 0; i < divEl.length; i++) {
-    let pEl = divEl[i].getElementsByTagName("p")[3];
+    let pEl = divEl[i].getElementsByTagName("p")[0];
     console.log(pEl);
 
     if (pEl) {
@@ -113,30 +113,31 @@ function searchCountriesMobile() {
   }
 }
 
-function minPopulation() {
-  let search = document.getElementById("search-min").value;
+function maxPopulation() {
+  let search = document.getElementById("search-max").value;
+  let tableRecord = document.getElementById("table");
   console.log(search);
-  let table = document.getElementById("table");
-
-  let tr = table.getElementsByTagName("tr");
+  let tr = tableRecord.getElementsByTagName("tr");
 
   for (let i = 0; i < tr.length; i++) {
     let td = tr[i].getElementsByTagName("td")[3];
 
     if (td) {
       let textvalue = td.textContent || td.innerText;
-      console.log();
-      if (textvalue < search) {
-        tr[i].style.display = "none";
-      } else {
+      let textToNumber = parseInt(textvalue);
+      let searchToNumber = parseInt(search);
+      console.log(textToNumber, searchToNumber);
+      if (searchToNumber > textToNumber || isNaN(searchToNumber)) {
         tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
       }
     }
   }
 }
 
-function maxPopulation() {
-  let search = document.getElementById("search-max").value;
+function minPopulation() {
+  let search = document.getElementById("search-min").value;
   let tableRecord = document.getElementById("table");
 
   let tr = tableRecord.getElementsByTagName("tr");
@@ -145,9 +146,11 @@ function maxPopulation() {
     let td = tr[i].getElementsByTagName("td")[3];
 
     if (td) {
-      let textvalue = td.innerText || td.innerContent;
-      console.log(search);
-      if (textvalue > search) {
+      let textvalue = td.textContent || td.innerText;
+      let textToNumber = parseInt(textvalue);
+      let searchToNumber = parseInt(search);
+      console.log(textToNumber, searchToNumber);
+      if (searchToNumber < textToNumber || isNaN(searchToNumber)) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
