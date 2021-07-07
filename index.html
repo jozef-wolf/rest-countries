@@ -23,12 +23,25 @@
       onkeyup="searchCountries()"
       onkeydown="searchCountriesMobile()"
     />
+    <input
+      id="search-min"
+      type="text"
+      placeholder="min population"
+      onkeyup="minPopulation()"
+    />
+    <input
+      id="search-max"
+      type="text"
+      placeholder="max population"
+      onkeyup="maxPopulation()"
+    />
     <div class="container" id="container">
-      <table id="tableRecord">
+      <table id="table">
         <thead></thead>
         <tbody></tbody>
       </table>
     </div>
     <script src="main.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>

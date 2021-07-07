@@ -24,16 +24,18 @@ headerEl.innerHTML = `
     `;
 header.appendChild(headerEl);
 
-getCountries();
-
 async function getCountries() {
   const res = await fetch(url);
   const countries = await res.json();
 
   displayCountries(countries);
   displayCountriesMobile(countries);
+  minPopulation(countries);
+  maxPopulation(countries);
   console.log(countries);
 }
+
+getCountries();
 
 function displayCountries(countries) {
   countries.forEach((country) => {
@@ -71,8 +73,8 @@ function displayCountriesMobile(countries) {
 
 function searchCountries() {
   let search = document.getElementById("search").value.toUpperCase();
-  let tableRecord = document.getElementById("tableRecord");
-
+  let tableRecord = document.getElementById("table");
+  console.log(search);
   let tr = tableRecord.getElementsByTagName("tr");
 
   for (let i = 0; i < tr.length; i++) {
@@ -94,11 +96,10 @@ function searchCountriesMobile() {
   let search = document.getElementById("search").value.toUpperCase();
   let container = document.getElementById("container");
 
-  console.log(search);
   let divEl = container.getElementsByTagName("div");
 
   for (let i = 0; i < divEl.length; i++) {
-    let pEl = divEl[i].getElementsByTagName("p")[0];
+    let pEl = divEl[i].getElementsByTagName("p")[3];
     console.log(pEl);
 
     if (pEl) {
@@ -107,6 +108,49 @@ function searchCountriesMobile() {
         divEl[i].style.display = "";
       } else {
         divEl[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function minPopulation() {
+  let search = document.getElementById("search-min").value;
+  console.log(search);
+  let table = document.getElementById("table");
+
+  let tr = table.getElementsByTagName("tr");
+
+  for (let i = 0; i < tr.length; i++) {
+    let td = tr[i].getElementsByTagName("td")[3];
+
+    if (td) {
+      let textvalue = td.textContent || td.innerText;
+      console.log();
+      if (textvalue < search) {
+        tr[i].style.display = "none";
+      } else {
+        tr[i].style.display = "";
+      }
+    }
+  }
+}
+
+function maxPopulation() {
+  let search = document.getElementById("search-max").value;
+  let tableRecord = document.getElementById("table");
+
+  let tr = tableRecord.getElementsByTagName("tr");
+
+  for (let i = 0; i < tr.length; i++) {
+    let td = tr[i].getElementsByTagName("td")[3];
+
+    if (td) {
+      let textvalue = td.innerText || td.innerContent;
+      console.log(search);
+      if (textvalue > search) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
       }
     }
   }
