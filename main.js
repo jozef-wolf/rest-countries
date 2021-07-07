@@ -55,10 +55,10 @@ function displayCountriesMobile(countries) {
   countries.forEach((country) => {
     const countryEl = document.createElement("div");
     countryEl.classList.add("mobile");
-    console.log(countryEl);
+
     countryEl.innerHTML = `
         <div><img src='${country.flag}' width='100px'></img></div>
-        <h2>${country.name}</h2>
+        <p>${country.name}</p>
         <p><strong>Currency:</strong> ${country.currencies[0].name}</p>
         <p><strong>Language:</strong> ${country.languages[0].name}</p>
         <p><strong>Population:</strong> ${country.population}</p>
@@ -73,7 +73,6 @@ function searchCountries() {
   let search = document.getElementById("search").value.toUpperCase();
   let tableRecord = document.getElementById("tableRecord");
 
-  console.log(search);
   let tr = tableRecord.getElementsByTagName("tr");
 
   for (let i = 0; i < tr.length; i++) {
@@ -86,6 +85,28 @@ function searchCountries() {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function searchCountriesMobile() {
+  let search = document.getElementById("search").value.toUpperCase();
+  let container = document.getElementById("container");
+
+  console.log(search);
+  let divEl = container.getElementsByTagName("div");
+
+  for (let i = 0; i < divEl.length; i++) {
+    let pEl = divEl[i].getElementsByTagName("p")[0];
+    console.log(pEl);
+
+    if (pEl) {
+      let textvalue = pEl.textContent || pEl.innerText;
+      if (textvalue.toUpperCase().indexOf(search) > -1) {
+        divEl[i].style.display = "";
+      } else {
+        divEl[i].style.display = "none";
       }
     }
   }
