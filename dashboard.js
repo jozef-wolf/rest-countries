@@ -39,8 +39,9 @@ const rendercountriesInfo = (countries) => {
       
 		`;
 
-  const countryContainer = document.querySelector("[data-country]");
+  const countryContainer = document.querySelector(".data-country");
   countryContainer.innerHTML = html;
+  console.log(countryContainer);
 };
 
 document.addEventListener("DOMContentLoaded", fetchCountries);
