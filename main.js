@@ -94,7 +94,7 @@ function searchCountries() {
   let search = document.getElementById("search").value.toUpperCase();
   let tableRecord = document.getElementById("table");
   console.log(search);
-  let tr = tableRecord.getElementsByTagName("tr");
+  let tr = tableRecord.getElementsByClassName("desktop");
 
   for (let i = 0; i < tr.length; i++) {
     let displayStyle = "none";
