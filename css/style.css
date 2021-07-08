@@ -6,18 +6,35 @@
 
 body {
   margin: 0;
-  font-family: "Encode Sans SC", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-h1 {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+.wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5a6c85;
+}
+.wrapper header h1 {
   margin: 0;
+  font-size: 50px;
+  letter-spacing: 10px;
 }
-
-header {
-  margin: 30px 30px 0;
+.wrapper header a {
+  padding: 6px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #5a6c85;
 }
-
-.search {
+.wrapper header a a:hover {
+  background-color: #5a6c85;
+}
+.wrapper .search__section input {
   border-radius: 4px;
   padding: 10px;
   border: none;
@@ -26,19 +43,18 @@ header {
   box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.6);
   outline: none;
 }
-
-.container {
+.wrapper .container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.container .mobile {
+.wrapper .container .mobile {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .container .mobile {
+  .wrapper .container .mobile {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -48,46 +64,46 @@ header {
     padding: 10px;
   }
 }
-.container .mobile h2 {
+.wrapper .container .mobile h2 {
   font-size: 20px;
 }
-.container .mobile p {
+.wrapper .container .mobile p {
   font-size: 16px;
   padding: 5px;
 }
-.container .mobile p img {
+.wrapper .container .mobile p img {
   width: 100%;
 }
-.container .desktop {
+.wrapper .container .desktop {
   display: "";
 }
 @media only screen and (max-width: 768px) {
-  .container .desktop {
+  .wrapper .container .desktop {
     display: none;
   }
 }
-.container table {
-  width: 90%;
+.wrapper .container table {
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
-  .container table {
+  .wrapper .container table {
     font-size: 12px;
   }
 }
-.container table thead {
-  background-color: #5252a0;
+.wrapper .container table thead {
+  background-color: #5a6c85;
   color: white;
 }
 @media only screen and (max-width: 768px) {
-  .container table thead {
+  .wrapper .container table thead {
     display: flex;
     justify-content: space-around;
   }
 }
-.container table tbody {
+.wrapper .container table tbody {
   background-color: #f2f3fa;
 }
-.container table tbody td {
+.wrapper .container table tbody td {
   text-align: center;
 }
 
