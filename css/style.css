@@ -48,15 +48,15 @@ header {
     padding: 10px;
   }
 }
-.container .mobile div img {
-  width: 100%;
-}
 .container .mobile h2 {
   font-size: 20px;
 }
 .container .mobile p {
   font-size: 16px;
   padding: 5px;
+}
+.container .mobile p img {
+  width: 100%;
 }
 .container .desktop {
   display: "";
