@@ -25,8 +25,8 @@ headerEl.innerHTML = `
 header.appendChild(headerEl);
 
 async function getCountries() {
-  const res = await fetch(url);
-  const countries = await res.json();
+  const response = await fetch(url);
+  const countries = await response.json();
 
   displayCountries(countries);
   displayCountriesMobile(countries);
@@ -36,9 +36,20 @@ async function getCountries() {
   averageArea(countries);
   numberOfCountries(countries);
   averageBorders(countries);
+  return countries;
 }
 
-getCountries();
+document.addEventListener("DOMContentLoaded", async () => {
+  let countries = [];
+
+  try {
+    countries = await getCountries();
+  } catch (e) {
+    console.log("error");
+    console.log(e);
+  }
+  console.log(countries);
+});
 
 function displayCountries(countries) {
   countries.forEach((country) => {
@@ -68,7 +79,7 @@ function displayCountriesMobile(countries) {
         <p><strong>Language:</strong> ${country.languages[0].name}</p>
         <p><strong>Population:</strong> ${country.population}</p>
         <p><strong>Area:</strong> ${country.area}</p>
-        
+
   `;
     container.appendChild(countryEl);
   });
