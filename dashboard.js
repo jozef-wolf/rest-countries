@@ -32,10 +32,10 @@ const rendercountriesInfo = (countries) => {
   const BorderAvg = BorderSum / countries.length;
 
   html += `
-		  <div><p>Average population:</p>${PopulationAvg}</div>
-      <div><p>Average Area:</p>${AreaAvg}</div>
-      <div><p>Total number of countries:</p>${CountriesSum}</div>
-      <div><p>Average population:</p>${BorderAvg}</div>
+		  <div><p><strong>Average population: </strong></p>${PopulationAvg}</div>
+      <div><p><strong>Average Area: </strong></p>${AreaAvg}</div>
+      <div><p><strong>Total number of countries: </strong></p>${CountriesSum}</div>
+      <div><p><strong>Average population: </strong></p>${BorderAvg}</div>
       
 		`;
 
