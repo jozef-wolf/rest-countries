@@ -73,7 +73,7 @@ function displayCountriesMobile(countries) {
     countryEl.classList.add("mobile");
 
     countryEl.innerHTML = `
-        <div><img src='${country.flag}' width='100px'></img></div>
+        <p><img src='${country.flag}' width='100px'></img><p>
         <p>${country.name}</p>
         <p><strong>Currency:</strong> ${country.currencies[0].name}</p>
         <p><strong>Language:</strong> ${country.languages[0].name}</p>
@@ -92,17 +92,20 @@ function searchCountries() {
   let tr = tableRecord.getElementsByTagName("tr");
 
   for (let i = 0; i < tr.length; i++) {
-    let td = tr[i].getElementsByTagName("td")[0];
-    console.log(td);
+    let displayStyle = "none";
+    let td = tr[i].getElementsByTagName("td");
+    for (let j = 0; j < td.length - 1; ++j) {
+      console.log(td[j]);
 
-    if (td) {
-      let textvalue = td.textContent || td.innerText;
-      if (textvalue.toUpperCase().indexOf(search) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
+      if (td[j]) {
+        let textvalue = td[j].textContent || td[j].innerText;
+        if (textvalue.toUpperCase().indexOf(search) > -1) {
+          displayStyle = "";
+          break;
+        }
       }
     }
+    tr[i].style.display = displayStyle;
   }
 }
 
@@ -113,16 +116,19 @@ function searchCountriesMobile() {
   let divEl = container.getElementsByTagName("div");
 
   for (let i = 0; i < divEl.length; i++) {
-    let pEl = divEl[i].getElementsByTagName("p")[0];
-    console.log(pEl);
+    let displayStyle = "none";
+    let pEl = divEl[i].getElementsByTagName("p");
+    for (let j = 0; j < pEl.length - 1; ++j) {
+      console.log(pEl[j]);
 
-    if (pEl) {
-      let textvalue = pEl.textContent || pEl.innerText;
-      if (textvalue.toUpperCase().indexOf(search) > -1) {
-        divEl[i].style.display = "";
-      } else {
-        divEl[i].style.display = "none";
+      if (pEl[j]) {
+        let textvalue = pEl[j].textContent || pEl[j].innerText;
+        if (textvalue.toUpperCase().indexOf(search) > -1) {
+          displayStyle = "";
+          break;
+        }
       }
     }
+    divEl[i].style.display = displayStyle;
   }
 }
