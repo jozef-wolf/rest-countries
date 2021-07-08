@@ -26,12 +26,13 @@ body {
 }
 .wrapper header a {
   padding: 6px;
-  border-radius: 5px;
+  background-color: black;
   text-decoration: none;
   color: #5a6c85;
 }
 .wrapper header a a:hover {
-  background-color: #5a6c85;
+  color: white;
+  background-color: white;
 }
 .wrapper .data-country {
   margin-left: 10%;

@@ -23,12 +23,12 @@ body {
     }
     a {
       padding: 6px;
-      border-radius: 5px;
-
+      background-color: black;
       text-decoration: none;
       color: rgb(90, 108, 133);
       a:hover {
-        background-color: rgb(90, 108, 133);
+        color: white;
+        background-color: white;
       }
     }
   }
