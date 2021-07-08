@@ -43,7 +43,9 @@ body {
       display: flex;
       flex-direction: row;
       letter-spacing: 5px;
-
+      i {
+        font-family: 20px;
+      }
       p {
       }
     }

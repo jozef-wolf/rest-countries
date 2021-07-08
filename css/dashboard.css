@@ -46,5 +46,8 @@ body {
   flex-direction: row;
   letter-spacing: 5px;
 }
+.wrapper .data-country div i {
+  font-family: 20px;
+}
 
 /*# sourceMappingURL=dashboard.css.map */
