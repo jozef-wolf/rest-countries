@@ -4,6 +4,32 @@ const searchEl = document.getElementById("search");
 const container = document.querySelector(".container");
 let url = "https://restcountries.eu/rest/v2/all";
 
+//getting data
+
+async function getCountries() {
+  const response = await fetch(url);
+  const countries = await response.json();
+
+  displayCountries(countries);
+  displayCountriesMobile(countries);
+  minPopulation(countries);
+  maxPopulation(countries);
+  return countries;
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  let countries = [];
+
+  try {
+    countries = await getCountries();
+  } catch (e) {
+    console.log("error");
+    console.log(e);
+  }
+});
+
+//Content for Header
+
 const ContentForHeader = {
   name: "Name",
   currency: "Currency",
@@ -24,31 +50,7 @@ headerEl.innerHTML = `
     `;
 header.appendChild(headerEl);
 
-async function getCountries() {
-  const response = await fetch(url);
-  const countries = await response.json();
-
-  displayCountries(countries);
-  displayCountriesMobile(countries);
-  minPopulation(countries);
-  maxPopulation(countries);
-  averagePopulation(countries);
-  averageArea(countries);
-  numberOfCountries(countries);
-  averageBorders(countries);
-  return countries;
-}
-
-document.addEventListener("DOMContentLoaded", async () => {
-  let countries = [];
-
-  try {
-    countries = await getCountries();
-  } catch (e) {
-    console.log("error");
-    console.log(e);
-  }
-});
+//List of countries
 
 function displayCountries(countries) {
   countries.forEach((country) => {
@@ -65,6 +67,8 @@ function displayCountries(countries) {
     countriesContainer.appendChild(countryEl);
   });
 }
+
+//Mobile list of countries
 
 function displayCountriesMobile(countries) {
   countries.forEach((country) => {
@@ -83,6 +87,8 @@ function displayCountriesMobile(countries) {
     container.appendChild(countryEl);
   });
 }
+
+//Search bar
 
 function searchCountries() {
   let search = document.getElementById("search").value.toUpperCase();
@@ -105,6 +111,8 @@ function searchCountries() {
     tr[i].style.display = displayStyle;
   }
 }
+
+//Mobile search bar
 
 function searchCountriesMobile() {
   let search = document.getElementById("search").value.toUpperCase();
