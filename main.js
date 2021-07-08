@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("error");
     console.log(e);
   }
-  console.log(countries);
 });
 
 function displayCountries(countries) {
@@ -95,8 +94,6 @@ function searchCountries() {
     let displayStyle = "none";
     let td = tr[i].getElementsByTagName("td");
     for (let j = 0; j < td.length - 1; ++j) {
-      console.log(td[j]);
-
       if (td[j]) {
         let textvalue = td[j].textContent || td[j].innerText;
         if (textvalue.toUpperCase().indexOf(search) > -1) {
@@ -119,8 +116,6 @@ function searchCountriesMobile() {
     let displayStyle = "none";
     let pEl = divEl[i].getElementsByTagName("p");
     for (let j = 0; j < pEl.length - 1; ++j) {
-      console.log(pEl[j]);
-
       if (pEl[j]) {
         let textvalue = pEl[j].textContent || pEl[j].innerText;
         if (textvalue.toUpperCase().indexOf(search) > -1) {
