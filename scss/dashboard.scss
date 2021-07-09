@@ -11,12 +11,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   margin: 2%;
-  max-width: 1980px;
+  max-width: 1240px;
   height: 100vh;
   header {
     display: flex;

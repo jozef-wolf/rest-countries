@@ -8,12 +8,14 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: 2%;
-  max-width: 1980px;
+  max-width: 1240px;
   header {
     display: flex;
     justify-content: space-between;
