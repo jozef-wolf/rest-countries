@@ -32,10 +32,10 @@ const rendercountriesInfo = (countries) => {
   const BorderAvg = BorderSum / countries.length;
 
   html += `
-		  <div><p><strong>Average population: </strong></p>${PopulationAvg}<i class="fas fa-users"></i></div>
-      <div><p><strong>Average Area: </strong></p>${AreaAvg}<i class="fas fa-chart-area"></i></div>
-      <div><p><strong>Total number of countries: </strong></p>${CountriesSum}<i class="fas fa-globe-americas"></i></div>
-      <div><p><strong>Average number of neighbours: </strong></p>${BorderAvg}<i class="fas fa-home"></i></div>
+		  <div><p><strong>Average population: </strong>${PopulationAvg}<i class="fas fa-users"></i></p></div>
+      <div><p><strong>Average Area: </strong>${AreaAvg}<i class="fas fa-chart-area"></i></p></div>
+      <div><p><strong>Total number of countries: </strong>${CountriesSum}<i class="fas fa-globe-americas"></i></p></div>
+      <div><p><strong>Average number of neighbours: </strong>${BorderAvg}<i class="fas fa-home"></i></p></div>
       
 		`;
 

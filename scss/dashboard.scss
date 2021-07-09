@@ -7,19 +7,27 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: rgb(90, 108, 133);
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: 2%;
+  max-width: 1980px;
+  height: 100vh;
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(90, 108, 133);
+    color: white;
+
     h1 {
       font-size: 50px;
       letter-spacing: 10px;
+      @media only screen and (max-width: 768px) {
+        font-size: 28px;
+        letter-spacing: 5px;
+      }
     }
     a {
       padding: 6px;
@@ -34,19 +42,30 @@ body {
   }
   .data-country {
     margin-left: 10%;
-    height: 40vh;
+    margin-top: 20%;
+    height: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
-
     flex-direction: column;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0;
+    }
     div {
       display: flex;
       flex-direction: row;
       letter-spacing: 5px;
+      width: 100vw;
+      color: white;
       i {
-        font-family: 20px;
+        font-size: 20px;
       }
       p {
+        font-size: 30px;
+        @media only screen and (max-width: 768px) {
+          font-size: 20px;
+          letter-spacing: 5px;
+        }
       }
     }
   }

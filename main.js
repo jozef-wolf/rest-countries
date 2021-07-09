@@ -76,7 +76,7 @@ function displayCountriesMobile(countries) {
     countryEl.classList.add("mobile");
 
     countryEl.innerHTML = `
-        <p><img src='${country.flag}' width='100px'></img><p>
+        <div><img src='${country.flag}' width='100px'></img></div>
         <p>${country.name}</p>
         <p><strong>Currency:</strong> ${country.currencies[0].name}</p>
         <p><strong>Language:</strong> ${country.languages[0].name}</p>

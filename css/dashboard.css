@@ -7,22 +7,31 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: #5a6c85;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: 2%;
+  max-width: 1980px;
+  height: 100vh;
 }
 .wrapper header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #5a6c85;
+  color: white;
 }
 .wrapper header h1 {
   font-size: 50px;
   letter-spacing: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper header h1 {
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
 }
 .wrapper header a {
   padding: 6px;
@@ -36,18 +45,36 @@ body {
 }
 .wrapper .data-country {
   margin-left: 10%;
-  height: 40vh;
+  margin-top: 20%;
+  height: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper .data-country {
+    margin-left: 0;
+  }
 }
 .wrapper .data-country div {
   display: flex;
   flex-direction: row;
   letter-spacing: 5px;
+  width: 100vw;
+  color: white;
 }
 .wrapper .data-country div i {
-  font-family: 20px;
+  font-size: 20px;
+}
+.wrapper .data-country div p {
+  font-size: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper .data-country div p {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
 }
 
 /*# sourceMappingURL=dashboard.css.map */
