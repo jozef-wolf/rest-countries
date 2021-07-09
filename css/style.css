@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #5a6c85;
+  background-color: white;
 }
 
 .wrapper {
@@ -20,7 +20,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: #426646;
+  box-shadow: 0px 4px 2px -2px rgba(108, 166, 114, 0.6);
 }
 .wrapper header h1 {
   margin: 0;
@@ -36,20 +37,16 @@ body {
 }
 .wrapper header a {
   padding: 6px;
-  background-color: white;
+  background-color: #6ca672;
   text-decoration: none;
-  color: #5a6c85;
-}
-.wrapper header a a:hover {
   color: white;
-  background-color: white;
 }
 .wrapper .search__section {
-  padding-bottom: 10px;
+  padding: 30px;
 }
 .wrapper .search__section input {
   border-radius: 4px;
-  padding: 10px;
+  padding: 5px;
   border: none;
   font-size: 14px;
   margin-left: 20px;
@@ -74,23 +71,23 @@ body {
 @media only screen and (max-width: 768px) {
   .wrapper .container .mobile {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     margin: 20px;
     box-shadow: 1px 1px 6px -2px rgba(0, 0, 0, 0.6);
     padding: 10px;
-    background-color: #f2f3fa;
+    box-shadow: 1px 1px 6px -2px rgba(108, 166, 114, 0.6);
   }
-}
-.wrapper .container .mobile div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper .container .mobile p {
-  font-size: 16px;
-  padding: 5px;
+  .wrapper .container .mobile div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper .container .mobile p {
+    font-size: 16px;
+    padding: 5px;
+  }
 }
 .wrapper .container .desktop {
   display: "";
@@ -109,8 +106,8 @@ body {
   }
 }
 .wrapper .container table thead {
-  background-color: #5a6c85;
-  color: white;
+  background-color: #6ca672;
+  color: black;
 }
 @media only screen and (max-width: 768px) {
   .wrapper .container table thead {
@@ -119,9 +116,13 @@ body {
   }
 }
 .wrapper .container table tbody {
-  background-color: #f2f3fa;
+  background-color: white;
+  color: #426646;
 }
-.wrapper .container table tbody td {
+.wrapper .container table tbody .desktop {
+  box-shadow: 1px 1px 6px -2px rgba(108, 166, 114, 0.6);
+}
+.wrapper .container table tbody .desktop td {
   text-align: center;
 }
 .wrapper .container table tbody td:last-child {
