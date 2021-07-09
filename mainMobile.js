@@ -74,7 +74,6 @@ function minPopulationMobile() {
   let tableRecord = document.getElementById("container");
 
   let tr = tableRecord.getElementsByClassName("mobile");
-  console.log(tr);
   for (let i = 0; i < tr.length; i++) {
     let td = tr[i].getElementsByTagName("p")[3];
 

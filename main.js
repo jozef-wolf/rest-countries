@@ -4,7 +4,7 @@ const searchEl = document.getElementById("search");
 const container = document.querySelector(".container");
 let url = "https://restcountries.eu/rest/v2/all";
 
-//getting data
+//async await - getting data
 
 async function getCountries() {
   const response = await fetch(url);
