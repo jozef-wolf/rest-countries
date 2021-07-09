@@ -14,6 +14,8 @@ async function getCountries() {
   displayCountriesMobile(countries);
   minPopulation(countries);
   maxPopulation(countries);
+  maxPopulationMobile(countries);
+  maxPopulationMobile(countries);
   return countries;
 }
 
@@ -78,10 +80,10 @@ function displayCountriesMobile(countries) {
     countryEl.innerHTML = `
         <div><img src='${country.flag}' width='100px'></img></div>
         <p>${country.name}</p>
-        <p><strong>Currency:</strong> ${country.currencies[0].name}</p>
-        <p><strong>Language:</strong> ${country.languages[0].name}</p>
-        <p><strong>Population:</strong> ${country.population}</p>
-        <p><strong>Area:</strong> ${country.area}</p>
+        <p>${country.currencies[0].name}</p>
+        <p>${country.languages[0].name}</p>
+        <p>${country.population}</p>
+        <p>${country.area}</p>
 
   `;
     container.appendChild(countryEl);
