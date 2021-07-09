@@ -1,4 +1,4 @@
-//Mobile list of countries 
+//Mobile list of countries
 
 function displayCountriesMobile(countries) {
   countries.forEach((country) => {
