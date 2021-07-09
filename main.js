@@ -80,12 +80,13 @@ function displayCountriesMobile(countries) {
     countryEl.innerHTML = `
         <div><img src='${country.flag}' width='100px'></img></div>
         <p>${country.name}</p>
-        <p>${country.currencies[0].name}</p>
-        <p>${country.languages[0].name}</p>
-        <p>${country.population}</p>
-        <p>${country.area}</p>
+        <p><strong>Currency</strong>${country.currencies[0].name}</p>
+        <p><strong>Language</strong>${country.languages[0].name}</p>
+        <p class="population">${country.population}</p>
+        <p><strong>Area</strong>${country.area}</p>
 
   `;
+
     container.appendChild(countryEl);
   });
 }
