@@ -43,7 +43,11 @@ body {
 .wrapper header a {
   padding: 6px;
   background-color: #6ca672;
+  color: #426646;
   text-decoration: none;
+}
+.wrapper header a:hover {
+  background-color: #426646;
   color: white;
 }
 .wrapper .data-country {
