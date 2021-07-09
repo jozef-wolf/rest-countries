@@ -1,4 +1,4 @@
-//Mobile list of countries
+//Mobile list of countries 
 
 function displayCountriesMobile(countries) {
   countries.forEach((country) => {
@@ -42,6 +42,8 @@ function searchCountriesMobile() {
   }
 }
 
+//max population
+
 function maxPopulationMobile() {
   let search = document.getElementById("search-max").value;
   let tableRecord = document.getElementById("container");
@@ -64,6 +66,8 @@ function maxPopulationMobile() {
     }
   }
 }
+
+//min population
 
 function minPopulationMobile() {
   let search = document.getElementById("search-min").value;

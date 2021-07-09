@@ -94,6 +94,8 @@ function searchCountries() {
   }
 }
 
+//max population
+
 function maxPopulation() {
   let search = document.getElementById("search-max").value;
   let tableRecord = document.getElementById("table");
@@ -116,6 +118,8 @@ function maxPopulation() {
     }
   }
 }
+
+//min population
 
 function minPopulation() {
   let search = document.getElementById("search-min").value;
