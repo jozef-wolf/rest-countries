@@ -31,10 +31,11 @@ body {
 .wrapper header h1 {
   font-size: 50px;
   letter-spacing: 10px;
+  font-weight: 800;
 }
 @media only screen and (max-width: 768px) {
   .wrapper header h1 {
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 5px;
   }
 }
@@ -74,6 +75,7 @@ body {
 }
 .wrapper .data-country div p {
   font-size: 30px;
+  font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
   .wrapper .data-country div p {
