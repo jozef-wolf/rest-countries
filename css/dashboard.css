@@ -20,7 +20,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 2%;
+  padding: 2%;
   max-width: 1240px;
   height: 100vh;
 }
@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #426646;
-  box-shadow: 0px 4px 2px -2px rgba(108, 166, 114, 0.6);
+  box-shadow: 0px 4px 2px -2px rgba(66, 102, 70, 0.6);
 }
 .wrapper header h1 {
   font-size: 50px;
