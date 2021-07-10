@@ -11,11 +11,10 @@ const comparer = (idx, asc) => (a, b) =>
   );
 
 // do the work...
-
 document.querySelectorAll("th").forEach((th) =>
   th.addEventListener("click", () => {
     const table = th.closest("table");
-    Array.from(table.querySelectorAll("tbody > tr"))
+    Array.from(table.querySelectorAll("tr:nth-child(n+2)"))
       .sort(
         comparer(
           Array.from(th.parentNode.children).indexOf(th),
@@ -25,3 +24,5 @@ document.querySelectorAll("th").forEach((th) =>
       .forEach((tr) => table.appendChild(tr));
   })
 );
+
+//mobile

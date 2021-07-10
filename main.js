@@ -1,5 +1,4 @@
 const countriesContainer = document.querySelector("tbody");
-const header = document.querySelector("thead");
 const searchEl = document.getElementById("search");
 const container = document.querySelector(".container");
 let url = "https://restcountries.eu/rest/v2/all";
@@ -50,7 +49,7 @@ headerEl.innerHTML = `
       <th>${ContentForHeader.area}</th>
       <th>${ContentForHeader.flag}</th>
     `;
-header.appendChild(headerEl);
+countriesContainer.appendChild(headerEl);
 
 //List of countries
 
