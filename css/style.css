@@ -121,6 +121,9 @@ body {
     justify-content: space-around;
   }
 }
+.wrapper .container table thead tr th {
+  cursor: pointer;
+}
 .wrapper .container table tbody {
   background-color: white;
   color: #426646;
