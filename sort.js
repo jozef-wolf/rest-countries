@@ -1,4 +1,6 @@
-function desktop() {
+// desktop sorting
+
+const desktop = function () {
   const getCellValue = (tr, idx) =>
     tr.children[idx].innerText || tr.children[idx].textContent;
 
@@ -24,10 +26,11 @@ function desktop() {
         .forEach((tr) => table.appendChild(tr));
     })
   );
-}
+};
 
-//mobile
-function mobile() {
+//mobile sorting
+
+const mobile = function () {
   const getCellValueM = (div, idx) =>
     div.children[idx].innerText || div.children[idx].textContent;
 
@@ -53,7 +56,7 @@ function mobile() {
         .forEach((div) => container.appendChild(div));
     })
   );
-}
+};
 
 if (window.matchMedia("(min-width: 768px)").matches) {
   console.log("Screen width is at least 768px");
