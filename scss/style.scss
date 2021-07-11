@@ -96,7 +96,7 @@ body {
       }
     }
     table {
-      width: 100%;
+      width: 90vw;
       @media only screen and (max-width: 768px) {
         font-size: 12px;
       }
@@ -114,7 +114,7 @@ body {
         & tr:first-child {
           background-color: #6ca672;
           color: black;
-          width: 100%;
+
           & th {
             cursor: pointer;
           }
