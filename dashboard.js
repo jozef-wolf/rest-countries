@@ -36,7 +36,7 @@ const rendercountriesInfo = (countries) => {
       
 		`;
 
-  const countryContainer = document.querySelector(".data-country");
+  const countryContainer = document.querySelector(".wrapper__data");
   countryContainer.innerHTML = html;
 };
 
