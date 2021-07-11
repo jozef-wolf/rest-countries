@@ -42,12 +42,12 @@ const ContentForHeader = {
 
 const headerEl = document.createElement("tr");
 headerEl.innerHTML = `
-      <th>${ContentForHeader.name}</th>
-      <th>${ContentForHeader.currency}</th>
-      <th>${ContentForHeader.language}</th>
-      <th>${ContentForHeader.population}</th>
-      <th>${ContentForHeader.area}</th>
-      <th>${ContentForHeader.flag}</th>
+      <th class="sort">${ContentForHeader.name}</th>
+      <th class="sort">${ContentForHeader.currency}</th>
+      <th class="sort">${ContentForHeader.language}</th>
+      <th class="sort">${ContentForHeader.population}</th>
+      <th class="sort">${ContentForHeader.area}</th>
+      <th class="sort">${ContentForHeader.flag}</th>
     `;
 countriesContainer.appendChild(headerEl);
 
