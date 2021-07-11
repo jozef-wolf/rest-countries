@@ -1,5 +1,5 @@
 # Rest-countries app 
-
+### author - Józef Wolf
 ## Application that coumincates with rest-countries API.
 ## Table with all countries following columns: name, currency, language, population, area ,flag.
 
@@ -11,3 +11,6 @@
 
 ## Technologies used: 
 ### -VanillaJS, HTML, SCSS. 
+
+
+[Go to Rest-countries](https://jozef-wolf.github.io/rest-countries/)
