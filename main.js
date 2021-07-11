@@ -42,12 +42,12 @@ const ContentForHeader = {
 
 const headerEl = document.createElement("tr");
 headerEl.innerHTML = `
-      <th class="sort">${ContentForHeader.name}</th>
-      <th class="sort">${ContentForHeader.currency}</th>
-      <th class="sort">${ContentForHeader.language}</th>
-      <th class="sort">${ContentForHeader.population}</th>
-      <th class="sort">${ContentForHeader.area}</th>
-      <th class="sort">${ContentForHeader.flag}</th>
+      <th class="arrow-down" onclick="this.classList.toggle('active')">${ContentForHeader.name}</th>
+      <th class="arrow-down" onclick="this.classList.toggle('active')">${ContentForHeader.currency}</th>
+      <th class="arrow-down" onclick="this.classList.toggle('active')">${ContentForHeader.language}</th>
+      <th class="arrow-down" onclick="this.classList.toggle('active')">${ContentForHeader.population}</th>
+      <th class="arrow-down" onclick="this.classList.toggle('active')">${ContentForHeader.area}</th>
+      <th>${ContentForHeader.flag}</th>
     `;
 countriesContainer.appendChild(headerEl);
 

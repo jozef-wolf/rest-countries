@@ -101,15 +101,26 @@ body {
         font-size: 12px;
       }
 
+      .arrow-down:after {
+        content: "\25be";
+      }
+
+      .arrow-down.active:after {
+        content: "\25b4";
+      }
       tbody {
         background-color: white;
         color: #426646;
         & tr:first-child {
           background-color: #6ca672;
           color: black;
+          & th {
+            cursor: pointer;
+          }
         }
         & tr {
           box-shadow: 0px 3px 2px -2px rgba(108, 166, 114, 0.6);
+
           & td {
             text-align: center;
           }
