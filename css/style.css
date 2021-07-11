@@ -5,14 +5,17 @@
   padding: 0;
 }
 
-body {
+html {
+  overflow-x: hidden;
+}
+html body {
   font-family: "Poppins", sans-serif;
   background-color: white;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
-
-.wrapper {
+html body .wrapper {
   display: flex;
   flex-direction: column;
   padding: 2%;
@@ -20,7 +23,7 @@ body {
   height: 100vh;
   width: 100%;
 }
-.wrapper header {
+html body .wrapper header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,34 +31,34 @@ body {
   box-shadow: 0px 4px 2px -2px rgba(66, 102, 70, 0.6);
 }
 @media only screen and (max-width: 768px) {
-  .wrapper header {
+  html body .wrapper header {
     flex-direction: column;
   }
 }
-.wrapper header h1 {
+html body .wrapper header h1 {
   margin: 0;
   font-size: 50px;
   letter-spacing: 10px;
   font-weight: 800;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper header h1 {
+  html body .wrapper header h1 {
     font-size: 25px;
     letter-spacing: 5px;
   }
 }
-.wrapper header a {
+html body .wrapper header a {
   padding: 6px;
   margin: 6px;
   background-color: #6ca672;
   color: #426646;
   text-decoration: none;
 }
-.wrapper header a:hover {
+html body .wrapper header a:hover {
   background-color: #426646;
   color: white;
 }
-.wrapper .data-country {
+html body .wrapper .wrapper__data {
   margin-left: 10%;
   height: 70%;
   display: flex;
@@ -63,34 +66,34 @@ body {
   flex-direction: column;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .data-country {
+  html body .wrapper .wrapper__data {
     margin-left: 0;
   }
 }
-.wrapper .data-country div {
+html body .wrapper .wrapper__data div {
   display: flex;
   flex-direction: row;
   letter-spacing: 5px;
   width: 100%;
   color: #6ca672;
 }
-.wrapper .data-country div i {
+html body .wrapper .wrapper__data div i {
   font-size: 20px;
 }
-.wrapper .data-country div p {
+html body .wrapper .wrapper__data div p {
   font-size: 30px;
   font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .data-country div p {
+  html body .wrapper .wrapper__data div p {
     font-size: 20px;
     letter-spacing: 5px;
   }
 }
-.wrapper .search__section {
+html body .wrapper .search__section {
   padding: 30px;
 }
-.wrapper .search__section input {
+html body .wrapper .search__section input {
   border-radius: 4px;
   padding: 5px;
   border: none;
@@ -100,22 +103,22 @@ body {
   outline: none;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .search__section input {
+  html body .wrapper .search__section input {
     margin: 5px;
   }
 }
-.wrapper .container {
+html body .wrapper .container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.wrapper .container .mobile {
+html body .wrapper .container .mobile {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .container .mobile {
+  html body .wrapper .container .mobile {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -125,62 +128,70 @@ body {
     padding: 10px;
     box-shadow: 1px 1px 6px -2px rgba(108, 166, 114, 0.6);
   }
-  .wrapper .container .mobile div {
+  html body .wrapper .container .mobile div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .wrapper .container .mobile p {
+  html body .wrapper .container .mobile p {
     font-size: 16px;
     padding: 5px;
   }
 }
-.wrapper .container .desktop {
+html body .wrapper .container .desktop {
   display: "";
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .container .desktop {
+  html body .wrapper .container .desktop {
     display: none;
   }
 }
-.wrapper .container table {
-  width: 90vw;
+html body .wrapper .container table {
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
-  .wrapper .container table {
+  html body .wrapper .container table {
     font-size: 12px;
   }
 }
-.wrapper .container table .arrow-down:after {
+html body .wrapper .container table .arrow-down:after {
   content: "▾";
 }
-.wrapper .container table .arrow-down.active:after {
+html body .wrapper .container table .arrow-down.active:after {
   content: "▴";
 }
-.wrapper .container table tbody {
+html body .wrapper .container table tbody {
   background-color: white;
   color: #426646;
 }
-.wrapper .container table tbody tr:first-child {
+html body .wrapper .container table tbody tr:first-child {
   background-color: #6ca672;
   color: black;
 }
-.wrapper .container table tbody tr:first-child th {
+@media only screen and (max-width: 768px) {
+  html body .wrapper .container table tbody tr:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+html body .wrapper .container table tbody tr:first-child th {
+  flex: 0 0 33.333333%;
   cursor: pointer;
 }
-.wrapper .container table tbody tr {
+html body .wrapper .container table tbody tr {
   box-shadow: 0px 3px 2px -2px rgba(108, 166, 114, 0.6);
 }
-.wrapper .container table tbody td:last-child {
+html body .wrapper .container table tbody td:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
 }
-.wrapper .container table tr {
+html body .wrapper .container table tr {
   box-shadow: 0px 3px 2px -2px rgba(108, 166, 114, 0.6);
 }
-.wrapper .container table tr td {
+html body .wrapper .container table tr td {
   text-align: center;
   color: #426646;
 }
