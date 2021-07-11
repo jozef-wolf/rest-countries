@@ -5,14 +5,12 @@
 }
 
 html {
-  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: white;
-  overflow-x: hidden;
   display: flex;
   justify-content: center;
 }
@@ -21,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2%;
+  margin: 2%;
   max-width: 1240px;
   height: 100vh;
 }
@@ -31,6 +30,11 @@ body {
   color: #426646;
   box-shadow: 0px 4px 2px -2px rgba(66, 102, 70, 0.6);
 }
+@media only screen and (max-width: 768px) {
+  .wrapper header {
+    flex-direction: column;
+  }
+}
 .wrapper header h1 {
   font-size: 50px;
   letter-spacing: 10px;
@@ -38,11 +42,12 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .wrapper header h1 {
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 5px;
   }
 }
 .wrapper header a {
+  margin: 6px;
   padding: 6px;
   background-color: #6ca672;
   color: #426646;
