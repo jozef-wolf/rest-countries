@@ -9,6 +9,10 @@ const fetchCountries = () => {
     .then((countries) => rendercountriesInfo(countries));
 };
 
+const getAverage = function(average){
+  
+}
+
 const rendercountriesInfo = (countries) => {
   let html = ``;
   const PopulationSum = countries.reduce(
