@@ -4,15 +4,13 @@ function displayCountriesMobile(countries) {
   countries.forEach((country) => {
     const countryEl = document.createElement("div");
     countryEl.classList.add("mobile");
-
+    console.log(country);
     countryEl.innerHTML = `
         
-        <p>${country.name}</p>
-        <p><strong>Currency</strong>${country.currencies[0].name}</p>
-        <p><strong>Language</strong>${country.languages[0].name}</p>
+        <p>${country.name.common}</p>
         <p>${country.population}</p>
         <p><strong>Area</strong>${country.area}</p>
-        <img src='${country.flag}' width='100px'></img>
+        <img src='${country.flags.png}' width='100px'></img>
   `;
 
     container.appendChild(countryEl);

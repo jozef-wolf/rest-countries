@@ -1,16 +1,15 @@
 const countriesContainer = document.querySelector("tbody");
 const searchEl = document.getElementById("search");
 const container = document.querySelector(".container");
-let url = "https://restcountries.eu/rest/v2/all";
+let url = "https://restcountries.com/v3.1/all";
 
 //async await - getting data
 
 async function getCountries() {
   const response = await fetch(url);
   const countries = await response.json();
-
-  displayCountries(countries);
   displayCountriesMobile(countries);
+  displayCountries(countries);
   minPopulation(countries);
   maxPopulation(countries);
   maxPopulationMobile(countries);
@@ -58,12 +57,12 @@ function displayCountries(countries) {
     const countryEl = document.createElement("tr");
     countryEl.classList.add("desktop");
     countryEl.innerHTML = `
-        <td>${country.name}</td>
-        <td>${country.currencies[0].name}</td>
-        <td>${country.languages[0].name}</td>
+        <td>${country.name.common}</td>
+        <td>${Object.keys(country.currencies)}</td>
+        <td>${Object.keys(country.languages)}</td>
         <td>${country.population}</td>
         <td>${country.area}</td>
-        <td><img src='${country.flag}'  width='100px'></img></td>
+        <td><img src='${country.flags.png}'  width='100px'></img></td>
   `;
     countriesContainer.appendChild(countryEl);
   });
